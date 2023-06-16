@@ -1,4 +1,4 @@
-export const pattern = {
+window.pattern = {
   name: "Pattern Template",
   author: "boubou",
   make: (
