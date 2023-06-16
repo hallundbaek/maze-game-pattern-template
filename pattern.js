@@ -9,9 +9,9 @@ window.pattern = {
     smoothGraphics, // Function that returns a new SmoothGraphics() from @pixi/graphics-smooth:0.0.30
     random // Function returns pseudorandom number between 0 and 1. Seed changes daily.
   ) => {
-    var container = new pixi.Container();
+    const container = new pixi.Container();
 
-    var graphics = new pixi.Graphics();
+    const graphics = new pixi.Graphics();
     graphics.beginFill(0xffffff);
     // The following region of the DisplayObject will be rendered for the pattern:
     // {x: tileSize, y: tileSize, width: width * tileSize, height: height * tileSize}
@@ -26,7 +26,7 @@ window.pattern = {
 
     container.addChild(graphics);
 
-    var sGraphics = smoothGraphics();
+    const sGraphics = smoothGraphics();
     sGraphics.beginFill(0x808080);
     sGraphics.drawCircle(
       (1 + width * random()) * tileSize,
