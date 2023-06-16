@@ -26,16 +26,16 @@ window.pattern = {
 
     container.addChild(graphics);
 
-    graphics = smoothGraphics();
-    graphics.beginFill(0x808080);
-    graphics.drawCircle(
+    var sGraphics = smoothGraphics();
+    sGraphics.beginFill(0x808080);
+    sGraphics.drawCircle(
       (1 + width * random()) * tileSize,
       (1 + height * random()) * tileSize,
       3 * tileSize
     );
-    graphics.endFill();
+    sGraphics.endFill();
 
-    container.addChild(graphics);
+    container.addChild(sGraphics);
 
     return container;
   },
